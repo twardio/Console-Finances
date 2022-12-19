@@ -110,3 +110,24 @@ for (var i = 0; i < finances.length; i++ ) {
 }
 
 console.log('Total ' + '$' +sum);
+
+
+  var changes = [];
+  
+  for (var i = 0; i < finances.length; i++) {
+    if (i === 0) {
+      changes.push(0);
+    } else {
+      changes.push(finances[i][1] - finances[i - 1][1]);
+    }
+  }
+  
+
+  var sum = changes.reduce((total, change) => total + change, 0);
+  
+  
+  var average = sum / (changes.length - 1);
+
+  var rounded = average.toFixed(2);
+  
+  console.log('Average Change ' + '$' + rounded); 
