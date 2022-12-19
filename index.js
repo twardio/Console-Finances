@@ -92,3 +92,21 @@ var finances = [
     console.log('------------------------');
 
     console.log('Total Months: ' + finances.length)
+
+
+    var sum = 0;
+
+for (var i = 0; i < finances.length; i++ ) {
+    var subfinances = finances[i];
+
+    for (var j = 1; j < subfinances.length; j++) {
+        (subfinances[j]);{
+
+            sum += parseInt(subfinances[j]);
+        }
+
+        
+    }
+}
+
+console.log('Total ' + '$' +sum);
