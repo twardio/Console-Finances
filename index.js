@@ -131,3 +131,21 @@ console.log('Total ' + '$' +sum);
   var rounded = average.toFixed(2);
   
   console.log('Average Change ' + '$' + rounded); 
+
+
+
+    var greatestIncrease = 0;
+
+  for (var i = 1; i < finances.length; i++) {
+  
+    var currentProfit = finances[i][1];
+    var previousProfit = finances[i-1][1];
+  
+    var increase = currentProfit - previousProfit;
+    
+    if (increase > greatestIncrease) {
+      greatestIncrease = increase;
+    }
+  }
+  
+  console.log('Greatest Increase in Profits: ' + '$' + greatestIncrease);
