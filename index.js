@@ -149,3 +149,16 @@ console.log('Total ' + '$' +sum);
   }
   
   console.log('Greatest Increase in Profits: ' + '$' + greatestIncrease);
+
+
+    var greatestDecrease = 0;
+for (var i = 1; i < finances.length; i++) {
+  var currentProfit = finances[i][1];
+  var previousProfit = finances[i-1][1];
+  var decrease = previousProfit - currentProfit;
+  if (decrease > greatestDecrease) {
+    greatestDecrease = decrease;
+  }
+}
+
+console.log('Greatest Decrease in Profits: ' + '$' + '-' + greatestDecrease);
